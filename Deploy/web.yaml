@@ -21,7 +21,7 @@ spec:
   selector:
     matchLabels:
       app: web
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -35,7 +35,7 @@ spec:
             name: redis
             protocol: TCP        
       - name: web-app
-        image: janakiramm/py-red
+        image: kdursoji91/py-red-sql
         env:       
           - name: "REDIS_HOST"
             value: "localhost"
